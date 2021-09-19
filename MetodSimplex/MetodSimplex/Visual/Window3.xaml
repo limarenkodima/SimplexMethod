@@ -1,0 +1,34 @@
+﻿<Page x:Class="MetodSimplex.Visual.Window3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MetodSimplex.Visual"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Новая задача">
+    <ScrollViewer HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Visible">
+        <WrapPanel Orientation="Vertical" RenderTransformOrigin="0.506,0.506">
+            <WrapPanel.Effect>
+                <DropShadowEffect/>
+            </WrapPanel.Effect>
+            <WrapPanel x:Name="functionPanel"/>
+            <TextBlock x:Name="constrains" FontFamily="Calibri" FontSize="26" Width="647"><Run Text="Используйте пошаговый режим или решите задачу сразу."/><Run Text=":"/></TextBlock>
+            <WrapPanel x:Name="taskPanel"/>
+            <WrapPanel x:Name="vectorPanel" HorizontalAlignment="Stretch" Orientation="Vertical" >
+                <WrapPanel/>
+                <WrapPanel x:Name="vectorPanel1"/>
+            </WrapPanel>
+            <WrapPanel Margin="0, 0, 0, 0">
+                <CheckBox x:Name="Window4" Click="Window4_Click" VerticalAlignment="Center" Height="30" Width="20"/>
+                <Label Content="Действие для режима шагами"  HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="18" MouseDown="sbs_label" Width="524" Height="62"/>
+            </WrapPanel>
+            <Label x:Name="label" Height="36" />
+            <Button x:Name="ByBasis" Content="Метод искуственного базиса " HorizontalAlignment="Left" Margin="5, 3, 5, 0" FontFamily="Calibri" FontSize="26" Click="ByBasis_Click" Height="147" Width="754" IsCancel="True" IsDefault="True" Cursor="Hand">
+                <Button.Effect>
+                    <DropShadowEffect Direction="308" RenderingBias="Quality"/>
+                </Button.Effect>
+            </Button>
+        </WrapPanel>
+    </ScrollViewer>
+</Page>

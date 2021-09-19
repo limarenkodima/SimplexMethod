@@ -1,0 +1,30 @@
+﻿<Window x:Class="MetodSimplex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MetodSimplex"
+        mc:Ignorable="d"
+        Title="Симплекс-метод" Height="450" Width="800">
+    <Page>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="103*"/>
+                <ColumnDefinition Width="293*"/>
+            </Grid.ColumnDefinitions>
+            <Menu x:Name="menu" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2">
+                <MenuItem Header="Файл">
+                    <MenuItem x:Name="openTask" Header="Открыть задачу" Click="OpenTask_Click"/>
+                    <MenuItem x:Name="saveTask" Header="Сохранить задачу в файл" Click="SaveTask_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="help" Header="Справка" Click="Help_Click" RenderTransformOrigin="3.417,1.103" Height="29"/>
+                <MenuItem x:Name="createTask" Header="Создать новую задачу" Click="CreateTask_Click" Height="29" Width="137"/>
+
+            </Menu>
+            <Frame x:Name="taskFrame" Margin="0,29,0,0" Grid.ColumnSpan="2"/>
+
+
+
+        </Grid>
+    </Page>
+</Window>
